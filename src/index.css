@@ -112,7 +112,7 @@ p {
 .hero {
   height: calc(100vh - 5.5rem);
   background: linear-gradient(rgba(16, 16, 16, 0), rgba(15, 15, 15, 0)),
-    url("./assets/m2.jpg") center/cover no-repeat scroll;
+    url("./assets/mm.jpg") center/cover no-repeat scroll;
   display: flex;
 }
 
@@ -201,21 +201,6 @@ p {
   display: none;
 }
 
-.navlinks-btn {
-  background: transparent;
-  color: #f2f2f2;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 1.1rem;
-  text-transform: capitalize;
-  cursor: pointer;
-}
-
-.navlinks-btn:hover {
-  color: rgb(233, 161, 26);
-  cursor: pointer;
-}
-
 /* ======== Submenu ======= */
 
 .submenu {
@@ -242,14 +227,33 @@ p {
   .navbar-container {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .navbar-container h1 {
+    align-self: center;
   }
 
   .navlinks-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .navlink {
+    background: transparent;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+
+  .navlink:hover {
+    color: rgb(233, 161, 26);
+    cursor: pointer;
   }
 
   .submenu {
@@ -278,16 +282,38 @@ p {
 
   .submenu-links {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     padding: 1.5rem 2rem;
   }
 
-  .submenu-btn {
+  .submenu-cell {
+    position: relative;
+    height: 10rem;
+    z-index: 2;
+  }
+  .submenu-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .submenu-link {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
     text-transform: capitalize;
     font-size: 1.1rem;
+    color: white;
+  }
+
+  .submenu-link:hover {
+    color: rgb(233, 161, 26);
+    cursor: pointer;
   }
 }
 

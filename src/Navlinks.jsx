@@ -12,7 +12,7 @@ function Navlinks() {
         return (
           <button
             key={item.pageId}
-            className='navlinks-btn'
+            className='navlink'
             onMouseEnter={() => setPageId(item.pageId)}
           >
             {item.page}
