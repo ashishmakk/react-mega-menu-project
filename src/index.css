@@ -79,6 +79,8 @@ p {
                 PROJECT CSS
    ============================================ */
 
+/* ======== Navbar ======= */
+
 .navbar {
   background: #250b02;
 }
@@ -105,6 +107,8 @@ p {
   cursor: pointer;
 }
 
+/* ======== Hero ======= */
+
 .hero {
   height: calc(100vh - 5.5rem);
   background: linear-gradient(rgba(16, 16, 16, 0), rgba(15, 15, 15, 0)),
@@ -126,6 +130,8 @@ p {
 .hero-container h2 {
   margin-top: 7rem;
 }
+
+/* ======== Sidebar ======= */
 
 .sidebar {
   position: fixed;
@@ -186,9 +192,10 @@ p {
 }
 
 .sidebar-sublinks a:hover {
-color: rgb(232, 161, 9);
+  color: rgb(233, 161, 26);
 }
 
+/* ======== Navlinks ======= */
 
 .navlinks-container {
   display: none;
@@ -209,6 +216,16 @@ color: rgb(232, 161, 9);
   cursor: pointer;
 }
 
+/* ======== Submenu ======= */
+
+.submenu {
+  display: none;
+}
+
+.submenu-links {
+  display: none;
+}
+
 /* ============================================
                 MEDIA QUERIES 
    ============================================ */
@@ -217,6 +234,7 @@ color: rgb(232, 161, 9);
   .btn {
     display: none;
   }
+
   .sidebar {
     display: none;
   }
@@ -232,6 +250,44 @@ color: rgb(232, 161, 9);
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+  }
+
+  .submenu {
+    display: block;
+    position: fixed;
+    top: 6.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotateX(-90deg);
+    transform-origin: top;
+    perspective: 1000;
+    visibility: hidden;
+    opacity: 0;
+    width: 90vw;
+    max-width: 72rem;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0.3rem;
+  }
+
+  .show-submenu {
+    transform: translateX(-50%) rotateX(0deg);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .submenu-links {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .submenu-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1.1rem;
   }
 }
 

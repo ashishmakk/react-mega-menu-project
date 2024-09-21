@@ -15,7 +15,6 @@ function Sidebar() {
         </button>
         <div className='sidebar-links'>
           {data.map((item) => {
-            console.log(item);
             const { page, pageId, links } = item;
 
             return (
