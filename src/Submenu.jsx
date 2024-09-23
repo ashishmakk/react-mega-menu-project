@@ -25,7 +25,13 @@ function Submenu() {
       onMouseLeave={handleMouseLeave}
       ref={submenuContainer}
     >
-      <div className='submenu-links'>
+      <div
+        className='submenu-links'
+        style={{
+          gridTemplateColumns:
+            currentPage?.links?.length > 3 ? "1fr 1fr 1fr 1fr" : "1fr 1fr 1fr",
+        }}
+      >
         {currentPage?.links?.map((item) => {
           return (
             <div className='submenu-cell'>

@@ -248,7 +248,7 @@ p {
     font-size: 1.1rem;
     text-transform: capitalize;
     cursor: pointer;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
   .navlink:hover {
@@ -282,14 +282,13 @@ p {
 
   .submenu-links {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     padding: 1.5rem 2rem;
   }
 
   .submenu-cell {
     position: relative;
-    height: 10rem;
+    height: 12rem;
     z-index: 2;
   }
   .submenu-img {
